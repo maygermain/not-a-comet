@@ -1,0 +1,346 @@
+/*font-family: 'Raleway', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Share Tech Mono', monospace;*/
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100vh;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*fonts - edit*/
+h1 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px;
+}
+
+h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+}
+
+.caption {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-size: 12px;
+}
+
+/*Header nav*/
+header {
+  background-color: #02021C;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hero illustration transparent.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+nav {
+  margin: 0;
+  padding: 0.5%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+nav ul li a:hover {
+  color: #9CA0B9;
+}
+
+.header-logo {
+  width: 10vw;
+  height: auto;
+}
+
+.active {
+  font-weight: bold;
+  color: #9CA0B9;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 20px;
+  justify-items: center;
+  color: #E9E8ED;
+  list-style: none;
+  /*nav fonts*/
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.hero {
+  height: auto;
+}
+
+.hero h3 {
+  color: #E9E8ED;
+}
+
+.hero-text {
+  width: 30vh;
+  text-align: center;
+}
+
+.cta-button {
+  /*color*/
+  color: #E9E8ED;
+  background-color: #9CA0B9;
+  /*button styling*/
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+  border: none;
+  /*font styling*/
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.cta-button:hover {
+  color: #E9E8ED;
+  background-color: #3F4A66;
+}
+
+.fa-chevron-down {
+  display: flex;
+  justify-content: center;
+  color: #F7F9FD;
+  padding-top: 25px;
+}
+
+.down-arrow {
+  text-decoration: none;
+  justify-content: center;
+  margin: auto;
+  /*Is there a way to make this arrow bigger???*/
+}
+
+/*Footer Nav*/
+footer {
+  display: flex;
+  /* background-color: #2B2D42; */
+  padding: 5% 5% 5% 5%;
+  margin: 0;
+}
+
+.footer-nav nav {
+  margin: 0;
+  padding: 0.5%;
+}
+
+.footer-nav {
+  list-style-type: none;
+  text-align: center;
+}
+
+.footer-nav a:hover {
+  /* color: #8D99AE; */
+  /* text-decoration: underline; */
+}
+
+.footer-nav a {
+  text-decoration: none;
+  padding: 20px;
+  justify-items: center;
+  /* color: #F7F9FD; */
+  list-style: none;
+  /*nav fonts*/
+  /* font-family: 'Montserrat', sans-serif;
+  font-size: 14px; */
+}
+
+/*Homepage*/
+main {
+  background-color: #1B1C2A;
+  padding: 5% 5% 5% 5%;
+  margin: 0;
+}
+
+.hero {
+
+  margin: 0;
+  padding: 5% 5% 5% 5%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-text {
+  grid-column: 1;
+  margin: auto;
+}
+
+.hero-text h1 {
+  color: #8D99AE;
+}
+
+.hero-text p {
+  color: #F7F9FD;
+}
+
+.hero-text a {
+  color: #8D99AE;
+  text-decoration: none;
+  font-weight: bold;
+  margin: auto;
+}
+
+.fa-chevron-down {
+  display: flex;
+  justify-content: center;
+  color: #F7F9FD;
+  padding-top: 25px;
+}
+
+.down-arrow {
+  text-decoration: none;
+  justify-content: center;
+  margin: auto;
+  /*Is there a way to make this arrow bigger???*/
+}
+
+.objects {
+  padding-top: 1%;
+}
+
+/*filters*/
+/*https://www.w3schools.com/css/css_dropdowns.asp*/
+.filters {
+  padding-bottom: 1%;
+  display: inline;
+}
+
+.dropbutton {
+  /* background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none; */
+
+  /*color*/
+  color: #E9E8ED;
+  background-color: #9CA0B9;
+  /*button styling*/
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+  border: none;
+  /*font styling*/
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbutton {
+  color: #E9E8ED;
+  background-color: #3F4A66;
+}
+
+.object-tile a {
+  text-decoration: none;
+}
+
+.objects-container {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.object-tile {
+  background-color: #3F4A66;
+  border-radius: 5px;
+  width: 30%;
+  height: auto;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.object-tile img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.object-tile .content {
+  color: #F7F9FD;
+  padding: 30px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #8D99AE;
+}
+
+.object-tile:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+}
