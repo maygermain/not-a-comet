@@ -260,10 +260,12 @@ main {
 /*https://www.w3schools.com/css/css_dropdowns.asp*/
 .filters {
   padding-bottom: 1%;
-  display: inline;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .dropbutton {
+  display: inline-block;
   /*color*/
   color: #E9E8ED;
   background-color: #9CA0B9;
@@ -272,7 +274,6 @@ main {
   margin-bottom: 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   border-radius: 25px;
   border: none;
   /*font styling*/
@@ -330,7 +331,8 @@ main {
 
 .object-tile {
   background-color: #3F4A66;
-  border-radius: 5px;
+  border: white;
+  border-radius: 100px;
   width: 30%;
   height: auto;
   position: relative;
