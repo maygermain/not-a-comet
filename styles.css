@@ -317,6 +317,7 @@ main {
   background-color: #3F4A66;
 }
 
+/*Object tiles*/
 .object-tile a {
   text-decoration: none;
 }
@@ -332,12 +333,13 @@ main {
 .object-tile {
   background-color: #3F4A66;
   border: white;
-  border-radius: 100px;
+  border-radius: 250px;
   width: 30%;
   height: auto;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 5px 5px 30px #02021C;
 }
 
 .object-tile img {
@@ -351,7 +353,7 @@ main {
 
 .object-tile .content {
   color: #F7F9FD;
-  padding: 30px;
+  padding: 7%;
   text-align: center;
 }
 
