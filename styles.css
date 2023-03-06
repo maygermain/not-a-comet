@@ -269,6 +269,10 @@ main {
   margin: 0;
 }
 
+.filters .highlight {
+  background-color: #3F4A66;
+}
+
 .filter-toggle {
   display: inline;
   padding-right: 15%;
@@ -309,7 +313,7 @@ main {
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content h3 {
   display: block;
   /*styling*/
   color: #02021C;
@@ -319,11 +323,11 @@ main {
   font-family: 'Rubik', sans-serif;
   font-size: 14px;
   font-weight: 300;
-
 }
 
-.dropdown-content a:hover {
+.dropdown-content h3:hover {
   background-color: #9CA0B9;
+  cursor: pointer;
 }
 
 .dropdown:hover .dropdown-content {

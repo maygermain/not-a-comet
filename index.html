@@ -53,14 +53,14 @@
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Object Type</button>
           <div class="dropdown-content">
-            <a href="/">Nebula</a>
-            <a href="/">Open Cluster</a>
-            <a href="/">Globular Cluster</a>
-            <a href="/">Star Cloud</a>
-            <a href="/">Double Star</a>
-            <a href="/">Spiral Galaxy</a>
-            <a href="/">Elliptical Galaxy</a>
-            <a href="/">Irregular Galaxy</a>
+            <h3 id="nebula" onclick="filterSelection('nebula')">Nebula</h3>
+            <h3 id="open-cluster" onclick="filterSelection('open-cluster')">Open Cluster</h3>
+            <h3 id="globular-cluster" onclick="filterSelection('globular-cluster')">Globular Cluster</h3>
+            <h3 id="star-cloud" onclick="filterSelection('star-cloud')">Star Cloud</h3>
+            <h3 id="double-star" onclick="filterSelection('double-star')">Double Star</h3>
+            <h3 id="spiral-galaxy" onclick="filterSelection('spiral-galaxy')">Spiral Galaxy</h3>
+            <h3 id="elliptical-galaxy" onclick="filterSelection('elliptical-galaxy')">Elliptical Galaxy</h3>
+            <h3 id="irregular-galaxy" onclick="filterSelection('irregular-galaxy')">Irregular Galaxy</h3>
           </div>
         </div>
 
@@ -110,10 +110,10 @@
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Season</button>
           <div class="dropdown-content">
-            <a href="/">Winter</a>
-            <a href="/">Spring</a>
-            <a href="/">Summer</a>
-            <a href="/">Fall</a>
+            <h3 id="winter" onclick="filterSelection('winter')">Winter</h3>
+            <h3 id="spring" onclick="filterSelection('spring')">Spring</h3>
+            <h3 id="summer" onclick="filterSelection('summer')">Summer</h3>
+            <h3 id="fall" onclick="filterSelection('fall')">Fall</h3>
           </div>
         </div>
 
@@ -121,9 +121,9 @@
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Visibility</button>
           <div class="dropdown-content">
-            <a href="/">Eye</a>
-            <a href="/">Binoculars</a>
-            <a href="/">Telescope</a>
+            <h3 id="eye" onclick="filterSelection('eye')">Eye</h3>
+            <h3 id="binoculars" onclick="filterSelection('binoculars')">Binoculars</h3>
+            <h3 id="telescope" onclick="filterSelection('telescope')">Telescope</h3>
           </div>
         </div>
       </div>
@@ -1466,6 +1466,7 @@
     </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
