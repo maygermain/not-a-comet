@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(#02021C, #3F4A66, #6D809F)
+  background-image: linear-gradient(#02021C, #3F4A66)
 }
 
 html {
@@ -204,7 +204,7 @@ footer {
 
 /*Homepage*/
 main {
-  padding: 5% 5% 5% 5%;
+  padding: 2.5% 5% 5% 5%;
   margin: 0;
 }
 
@@ -253,15 +253,26 @@ main {
 }
 
 .objects {
-  padding-top: 1%;
+  margin: 0;
 }
 
 /*filters*/
 /*https://www.w3schools.com/css/css_dropdowns.asp*/
 .filters {
-  padding-bottom: 1%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  margin-bottom: 2.5%;
+}
+
+.filters h3 {
+  display: inline-block;
+  color: #E9E8ED;
+  margin: 0;
+}
+
+.filter-toggle {
+  display: inline;
+  padding-right: 15%;
+  margin: 0;
 }
 
 .dropbutton {
@@ -271,11 +282,11 @@ main {
   background-color: #9CA0B9;
   /*button styling*/
   padding: 10px 30px;
-  margin-bottom: 20px;
   text-align: center;
+  white-space: nowrap;
   text-decoration: none;
-  border-radius: 25px;
   border: none;
+  border-radius: 25px;
   /*font styling*/
   font-family: 'Rubik', sans-serif;
   font-size: 14px;
@@ -286,26 +297,33 @@ main {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-left: 5%;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: #E9E8ED;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
   display: block;
+  /*styling*/
+  color: #02021C;
+  padding: 12px 16px;
+  /*text*/
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+
 }
 
 .dropdown-content a:hover {
-  background-color: white;
+  background-color: #9CA0B9;
 }
 
 .dropdown:hover .dropdown-content {
@@ -331,15 +349,13 @@ main {
 }
 
 .object-tile {
-  background-color: #3F4A66;
-  border: white;
-  border-radius: 250px;
+  background-color: #9CA0B9;
   width: 30%;
   height: auto;
   position: relative;
-  border-radius: 5px;
+  border-radius: 50px;
   overflow: hidden;
-  box-shadow: 5px 5px 30px #02021C;
+  box-shadow: 1px 1px 30px #02021C;
 }
 
 .object-tile img {
@@ -358,7 +374,7 @@ main {
 }
 
 .content h2 {
-  color: #8D99AE;
+  color: #02021C;
 }
 
 .object-tile:hover {
@@ -366,16 +382,20 @@ main {
   transition: 0.5s ease-in-out;
 }
 
+.expand-more {
+  text-align: center;
+}
+
 .more-button {
+  display: inline-block;
+  margin-top: 5%;
   /*color*/
   color: #E9E8ED;
   background-color: #9CA0B9;
   /*button styling*/
   padding: 10px 30px;
-  margin-top: 5%;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   border-radius: 25px;
   border: none;
   /*font styling*/
