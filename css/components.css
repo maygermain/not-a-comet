@@ -26,8 +26,12 @@
   text-align: center;
 }
 
-.btn--top-margin {
+.btn--more {
   margin-top: 5%;
+}
+
+.btn--more:hover {
+  background-color: #02021C;
 }
 
 
