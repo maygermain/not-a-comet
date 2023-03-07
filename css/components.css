@@ -1,0 +1,192 @@
+/*Buttons*/
+.btn {
+  /*color*/
+  background-color: #9CA0B9;
+  color: #E9E8ED;
+  /*button styling*/
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+  border: none;
+  /*font styling*/
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.btn:hover {
+  color: #E9E8ED;
+  background-color: #3F4A66;
+}
+
+.btn--center {
+  text-align: center;
+}
+
+.btn--top-margin {
+  margin-top: 5%;
+}
+
+
+
+/*Decorative Arrows*/
+.fa-chevron-down {
+  display: flex;
+  justify-content: center;
+  color: #F7F9FD;
+  padding-top: 25px;
+}
+
+.scroll__down-arrow {
+  text-decoration: none;
+  justify-content: center;
+  margin: auto;
+}
+
+/*Filters/Dropdowns*/
+/*https://www.w3schools.com/css/css_dropdowns.asp*/
+.filters {
+  display: flex;
+  margin-bottom: 2.5%;
+}
+
+.filters h3 {
+  display: inline-block;
+  color: #E9E8ED;
+  margin: 0;
+}
+
+.filters .highlight {
+  background-color: #3F4A66;
+}
+
+.filter-toggle {
+  display: inline;
+  padding-right: 15%;
+  margin: 0;
+}
+
+.dropbutton {
+  display: inline-block;
+  /*color*/
+  color: #E9E8ED;
+  background-color: #9CA0B9;
+  /*button styling*/
+  padding: 10px 30px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  /*font styling*/
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #E9E8ED;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/*according to BEM I should be using .dropdown__selection, but it won't work - come back to this later!*/
+.dropdown h3 {
+  display: block;
+  /* styling  */
+  color: #02021C;
+  padding: 12px 16px;
+  /* text  */
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.dropdown__selection:hover {
+  background-color: #9CA0B9;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown__content {
+  display: block;
+}
+
+.dropdown:hover .dropbutton {
+  color: #E9E8ED;
+  background-color: #3F4A66;
+}
+
+/*Cards*/
+.objects {
+  margin: 0;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card__container {
+  padding: 5% 10%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background-color: #9CA0B9;
+  width: 30%;
+  height: auto;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 1px 1px 30px #02021C;
+}
+
+.card__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.card__content {
+  color: #F7F9FD;
+  padding: 7%;
+  text-align: center;
+}
+
+.card__header {
+  color: #02021C;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+}
+
+.card--data {
+  background-color: #02021C;
+  width: 25vw;
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  /* box-shadow: 1px 1px 30px #02021C; */
+}

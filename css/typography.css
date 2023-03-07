@@ -1,0 +1,28 @@
+/*fonts - edit*/
+h1 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px;
+}
+
+h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+}
+
+.caption {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-size: 12px;
+}

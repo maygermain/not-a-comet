@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Stylesheet-->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/main.css">
   <!--Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,28 +19,28 @@
 </head>
 
 <body>
-  <header>
-    <section class="header-nav">
-      <nav>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a class="active" href="index.html" src="/"><img class="header-logo"
-                src="images\potential logo 1.png"></a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </section>
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav__list--header">
+        <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+
+        <li class="nav__item"><a class="nav__link active" href="index.html" src="/"><img class="logo"
+              src="images\potential logo 1.png"></a></li>
+
+        <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
     <section class="hero">
-      <div class="hero-image">
-        <div class="hero-text">
-          <h1>Not a Comet!</h1>
-          <h3>Exploring the universe of non-comet objects catalogued by Charles Messier.</h3>
-          <a href="/" class="cta-button">Learn More</a>
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1 class="hero__header">Not a Comet!</h1>
+          <h3 class="hero__desc">Exploring the universe of non-comet objects catalogued by Charles Messier.</h3>
+          <a href="/" class="btn">Learn More</a>
         </div>
       </div>
-      <div class="nav-down-arrow">
-        <a class="down-arrow" href="#object-top"><i class="fa-solid fa-chevron-down fa-3x"></i></a>
+      <div class="scroll">
+        <a class="scroll__down-arrow" href="#object-top"><i class="fa-solid fa-chevron-down fa-3x"></i></a>
       </div>
     </section>
   </header>
@@ -52,15 +52,20 @@
         <!--Object type filter-->
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Object Type</button>
-          <div class="dropdown-content">
-            <h3 id="nebula" onclick="filterSelection('nebula')">Nebula</h3>
-            <h3 id="open-cluster" onclick="filterSelection('open-cluster')">Open Cluster</h3>
-            <h3 id="globular-cluster" onclick="filterSelection('globular-cluster')">Globular Cluster</h3>
-            <h3 id="star-cloud" onclick="filterSelection('star-cloud')">Star Cloud</h3>
-            <h3 id="double-star" onclick="filterSelection('double-star')">Double Star</h3>
-            <h3 id="spiral-galaxy" onclick="filterSelection('spiral-galaxy')">Spiral Galaxy</h3>
-            <h3 id="elliptical-galaxy" onclick="filterSelection('elliptical-galaxy')">Elliptical Galaxy</h3>
-            <h3 id="irregular-galaxy" onclick="filterSelection('irregular-galaxy')">Irregular Galaxy</h3>
+          <div class="dropdown__content">
+            <h3 class="dropdown__selection" id="nebula" onclick="filterSelection('nebula')">Nebula</h3>
+            <h3 class="dropdown__selection" id="open-cluster" onclick="filterSelection('open-cluster')">Open Cluster
+            </h3>
+            <h3 class="dropdown__selection" id="globular-cluster" onclick="filterSelection('globular-cluster')">Globular
+              Cluster</h3>
+            <h3 class="dropdown__selection" id="star-cloud" onclick="filterSelection('star-cloud')">Star Cloud</h3>
+            <h3 class="dropdown__selection" id="double-star" onclick="filterSelection('double-star')">Double Star</h3>
+            <h3 class="dropdown__selection" id="spiral-galaxy" onclick="filterSelection('spiral-galaxy')">Spiral Galaxy
+            </h3>
+            <h3 class="dropdown__selection" id="elliptical-galaxy" onclick="filterSelection('elliptical-galaxy')">
+              Elliptical Galaxy</h3>
+            <h3 class="dropdown__selection" id="irregular-galaxy" onclick="filterSelection('irregular-galaxy')">
+              Irregular Galaxy</h3>
           </div>
         </div>
 
@@ -109,1326 +114,1324 @@
         <!--Season filter-->
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Season</button>
-          <div class="dropdown-content">
-            <h3 id="winter" onclick="filterSelection('winter')">Winter</h3>
-            <h3 id="spring" onclick="filterSelection('spring')">Spring</h3>
-            <h3 id="summer" onclick="filterSelection('summer')">Summer</h3>
-            <h3 id="fall" onclick="filterSelection('fall')">Fall</h3>
+          <div class="dropdown__content">
+            <h3 class="dropdown__selection" id="winter" onclick="filterSelection('winter')">Winter</h3>
+            <h3 class="dropdown__selection" id="spring" onclick="filterSelection('spring')">Spring</h3>
+            <h3 class="dropdown__selection" id="summer" onclick="filterSelection('summer')">Summer</h3>
+            <h3 class="dropdown__selection" id="fall" onclick="filterSelection('fall')">Fall</h3>
           </div>
         </div>
 
         <!--Visibility filter-->
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Visibility</button>
-          <div class="dropdown-content">
-            <h3 id="eye" onclick="filterSelection('eye')">Eye</h3>
-            <h3 id="binoculars" onclick="filterSelection('binoculars')">Binoculars</h3>
-            <h3 id="telescope" onclick="filterSelection('telescope')">Telescope</h3>
+          <div class="dropdown__content">
+            <h3 class="dropdown__selection" id="eye" onclick="filterSelection('eye')">Eye</h3>
+            <h3 class="dropdown__selection" id="binoculars" onclick="filterSelection('binoculars')">Binoculars</h3>
+            <h3 class="dropdown__selection" id="telescope" onclick="filterSelection('telescope')">Telescope</h3>
           </div>
         </div>
       </div>
 
-      <div class="objects-container">
+      <div class="card__container">
         <!--add tags to object tile classes-->
-        <div class="object-tile nebula taurus winter telescope">
-          <a href="/">
-            <img alt="m1 crab nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula taurus winter telescope">
+          <a class="card__link" href="object-page-template.html">
+            <img class="card__img" alt="m1 crab nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M1
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Crab Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster aquarius autumn eye">
-          <a href="/">
-            <img alt="m2 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster aquarius autumn eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m2 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M2
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster canes-venatici spring binoculars">
-          <a href="/">
-            <img alt="m3 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster canes-venatici spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m3 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M3
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster scorpius summer telescope">
-          <a href="/">
-            <img alt="m4 globular-cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster scorpius summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m4 globular-cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M4
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster serpens summer binoculars">
-          <a href="/">
-            <img alt="m5 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster serpens summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m5 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M5
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster scorpius summer binoculars">
-          <a href="/">
-            <img alt="m6 butterfly cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster scorpius summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m6 butterfly cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M6
               </h2>
-              <h3>
+              <h3 class="card_desc">
                 Butterfly Cluster
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster scorpius summer binoculars">
-          <a href="/">
-            <img alt="m7 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster scorpius summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m7 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M7
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula sagittarius summer eye">
-          <a href="/">
-            <img alt="m8 emission nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula sagittarius summer eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m8 emission nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M8
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Lagoon Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster ophiuchus summer telescope">
-          <a href="/">
-            <img alt="m9 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster ophiuchus summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m9 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M9
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster ophiuchus summer binoculars">
-          <a href="/">
-            <img alt="m10 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster ophiuchus summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m10 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M10
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster scutum summer eye">
-          <a href="/">
-            <img alt="m11 wild duck cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster scutum summer eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m11 wild duck cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M11
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Wild Duck Cluster
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster ophiuchus summer binoculars">
-          <a href="/">
-            <img alt="m12 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster ophiuchus summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m12 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M12
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster hercules summer binoculars">
-          <a href="/">
-            <img alt="m13 hercules globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster hercules summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m13 hercules globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M13
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Hercules Globular Cluster
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster ophiuchus summer telescope">
-          <a href="/">
-            <img alt="m14 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster ophiuchus summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m14 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M14
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster pegasus autumn binoculars">
-          <a href="/">
-            <img alt="m15" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster pegasus autumn binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m15" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M15
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula open-cluster serpens summer telescope">
-          <a href="/">
-            <img alt="m16 eagle nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula open-cluster serpens summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m16 eagle nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M16
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Eagle Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula sagittarius summer binoculars">
-          <a href="/">
-            <img alt="m17 omega nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula sagittarius summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m17 omega nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M17
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Omega/Swan/Horseshoe/Lobster Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster sagittarius summer">
-          <a href="/">
-            <img alt="m18 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster sagittarius summer">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m18 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M18
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster ophiuchus summer binoculars">
-          <a href="/">
-            <img alt="m19 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster ophiuchus summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m19 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M19
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula sagittarius summer telescope">
-          <a href="/">
-            <img alt="m20 trifid nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula sagittarius summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m20 trifid nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M20
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Trifid Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster sagittarius summer">
-          <a href="/">
-            <img alt="m21 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster sagittarius summer">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m21 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M21
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster sagittarius summer eye">
-          <a href="/">
-            <img alt="m22 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster sagittarius summer eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m22 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M22
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster sagittarius summer">
-          <a href="/">
-            <img alt="m23 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster sagittarius summer">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m23 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M23
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile star-cloud sagittarius summer binoculars">
-          <a href="/">
-            <img alt="m24 sagittarius star cloud" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card star-cloud sagittarius summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m24 sagittarius star cloud" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M24
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Sagittarius Star Cloud/Delle Caustiche
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster sagittarius summer">
-          <a href="/">
-            <img alt="m25" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster sagittarius summer">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m25" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M25
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster scutum summer">
-          <a href="/">
-            <img alt="m26 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster scutum summer">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m26 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M26
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula vulpecula summer telescope">
-          <a href="/">
-            <img alt="m27 dumbbell nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula vulpecula summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m27 dumbbell nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M27
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Dumbbell Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster sagittarius summer binoculars">
-          <a href="/">
-            <img alt="m28 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster sagittarius summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m28 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M28
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster cygnus summer">
-          <a href="/">
-            <img alt="m29 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster cygnus summer">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m29 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M29
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster capricornus autumn binoculars">
-          <a href="/">
-            <img alt="m30 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster capricornus autumn binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m30 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M30
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy andromeda autumn eye">
-          <a href="/">
-            <img alt="m31 andromeda galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy andromeda autumn eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m31 andromeda galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M31
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Andromeda Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy andromeda autumn telescope">
-          <a href="/">
-            <img alt="m32 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy andromeda autumn telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m32 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M32
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy triangulum autumn eye">
-          <a href="/">
-            <img alt="m33 triangulum galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy triangulum autumn eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m33 triangulum galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M33
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Triangulum Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster perseus autumn">
-          <a href="/">
-            <img alt="m34" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster perseus autumn">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m34" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M34
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster gemini winter">
-          <a href="/">
-            <img alt="m35 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster gemini winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m35 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M35
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster auriga winter">
-          <a href="/">
-            <img alt="m36 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster auriga winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m36 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M36
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster auriga winter">
-          <a href="/">
-            <img alt="m37 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster auriga winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m37 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M37
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster auriga winter">
-          <a href="/">
-            <img alt="m38 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster auriga winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m38 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M38
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster cygnus autumn">
-          <a href="/">
-            <img alt="m39 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster cygnus autumn">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m39 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M39
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile double-star ursa-major spring">
-          <a href="/">
-            <img alt="m40 double star" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card double-star ursa-major spring">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m40 double star" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M40
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Winnecke 4
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster canis-major winter">
-          <a href="/">
-            <img alt="m41 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster canis-major winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m41 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M41
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula orion winter eye">
-          <a href="/">
-            <img alt="m42 orion nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula orion winter eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m42 orion nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M42
               </h2>
-              <h3>
+              <h3 class="header__desc">
                 Orion Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula orion winter telescope">
-          <a href="/">
-            <img alt="m43 de mairan's nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula orion winter telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m43 de mairan's nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M43
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 De Mairan's Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster cancer winter">
-          <a href="/">
-            <img alt="m44 beehive cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster cancer winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m44 beehive cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M44
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Beehive Cluster/Praesepe
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster taurus winter eye">
-          <a href="/">
-            <img alt="m45 pleiades" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster taurus winter eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m45 pleiades" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M45
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Pleiades
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster puppis winter binoculars">
-          <a href="/">
-            <img alt="m46 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster puppis winter binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m46 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M46
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster puppis winter">
-          <a href="/">
-            <img alt="m47 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster puppis winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m47 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M47
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster hydra winter">
-          <a href="/">
-            <img alt="m48 open-cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster hydra winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m48 open-cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M48
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy virgo spring binoculars">
-          <a href="/">
-            <img alt="m49 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy virgo spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m49 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M49
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster monoceros winter">
-          <a href="/">
-            <img alt="m50 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster monoceros winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m50 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M50
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy vanes-venatici spring telescope">
-          <a href="/">
-            <img alt="m51 whirlpool galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy vanes-venatici spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m51 whirlpool galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M51
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Whirlpool Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster cassiopeia autumn">
-          <a href="/">
-            <img alt="m52 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster cassiopeia autumn">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m52 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M52
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster coma-berenices spring telescope">
-          <a href="/">
-            <img alt="m53 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster coma-berenices spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m53 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M53
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster sagittarius summer binoculars">
-          <a href="/">
-            <img alt="m54 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster sagittarius summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m54 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M54
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster sagittarius summer">
-          <a href="/">
-            <img alt="m55 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster sagittarius summer">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m55 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M55
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster lyra summer telescope">
-          <a href="/">
-            <img alt="m56 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster lyra summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m56 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M56
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula lyra summer telescope">
-          <a href="/">
-            <img alt="m57 ring nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula lyra summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m57 ring nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M57
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Ring Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy virgo spring binoculars">
-          <a href="/">
-            <img alt="m58 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy virgo spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m58 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M58
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy virgo spring telescope">
-          <a href="/">
-            <img alt="m59 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy virgo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m59 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M59
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy virgo spring telescope">
-          <a href="/">
-            <img alt="m60 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy virgo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m60 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M60
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy virgo spring telescope">
-          <a href="/">
-            <img alt="m61 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy virgo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m61 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M61
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster ophiuchus summer telescope">
-          <a href="/">
-            <img alt="m62 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster ophiuchus summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m62 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M62
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy canes-venatici spring telescope">
-          <a href="/">
-            <img alt="m63 sunflower galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy canes-venatici spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m63 sunflower galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M63
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Sunflower Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy coma-berenices spring telescope">
-          <a href="/">
-            <img alt="m64 black eye galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy coma-berenices spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m64 black eye galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M64
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Black Eye Galaxy/Sleeping Beauty Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy leo spring telescope">
-          <a href="/">
-            <img alt="m65 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy leo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m65 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M65
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy leo spring telescope">
-          <a href="/">
-            <img alt="m66 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy leo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m66 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M66
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster cancer winter">
-          <a href="/">
-            <img alt="m67 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster cancer winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m67 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M67
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster hydra spring binoculars">
-          <a href="/">
-            <img alt="m68 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster hydra spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m68 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M68
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster sagittarius summer binoculars">
-          <a href="/">
-            <img alt="m69 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster sagittarius summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m69 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M69
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster sagittarius summer telescope">
-          <a href="/">
-            <img alt="m70 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster sagittarius summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m70 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M70
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster sagitta summer binoculars">
-          <a href="/">
-            <img alt="m71 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster sagitta summer binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m71 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M71
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster aquarius summer telescope">
-          <a href="/">
-            <img alt="m72 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster aquarius summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m72 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M72
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster aquarius summer">
-          <a href="/">
-            <img alt="m73 open-cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster aquarius summer">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m73 open-cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M73
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy pisces autumn telescope">
-          <a href="/">
-            <img alt="m74 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy pisces autumn telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m74 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M74
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster sagittarius summer telescope">
-          <a href="/">
-            <img alt="m75 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster sagittarius summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m75 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M75
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula perseus autumn binoculars">
-          <a href="/">
-            <img alt="m76 little dumbbell nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula perseus autumn binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m76 little dumbbell nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M76
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Little Dumbbell Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy cetus summer telescope">
-          <a href="/">
-            <img alt="m77 cetus a" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy cetus summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m77 cetus a" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M77
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Cetus A
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula orion winter binoculars">
-          <a href="/">
-            <img alt="m78 reflection nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula orion winter binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m78 reflection nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M78
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster lepus winter binoculars">
-          <a href="/">
-            <img alt="m79 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster lepus winter binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m79 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M79
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster scorpius summer telescope">
-          <a href="/">
-            <img alt="m80 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster scorpius summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m80 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M80
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy ursa-major spring binoculars">
-          <a href="/">
-            <img alt="m81 bode's galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy ursa-major spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m81 bode's galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M81
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Bode's Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile irregular-galaxy ursa-major spring binoculars">
-          <a href="/">
-            <img alt="m82 cigar galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card irregular-galaxy ursa-major spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m82 cigar galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M82
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Cigar Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy hydra spring binoculars">
-          <a href="/">
-            <img alt="m83 southern pinwheel" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy hydra spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m83 southern pinwheel" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M83
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Southern Pinwheel
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy virgo spring telescope">
-          <a href="/">
-            <img alt="m84 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy virgo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m84 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M84
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy coma-berenices spring telescope">
-          <a href="/">
-            <img alt="m85 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy coma-berenices spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m85 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M85
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy virgo spring binoculars">
-          <a href="/">
-            <img alt="m86 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy virgo spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m86 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M86
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy virgo spring telescope">
-          <a href="/">
-            <img alt="m87 virgo a" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy virgo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m87 virgo a" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M87
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Virgo A
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy coma-berenices spring binoculars">
-          <a href="/">
-            <img alt="m88 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy coma-berenices spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m88 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M88
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy virgo spring telescope">
-          <a href="/">
-            <img alt="m89 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy virgo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m89 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M89
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy virgo spring binoculars">
-          <a href="/">
-            <img alt="m90 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy virgo spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m90 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M90
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy coma-berenices spring telescope">
-          <a href="/">
-            <img alt="m91 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy coma-berenices spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m91 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M91
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster hercules summer eye">
-          <a href="/">
-            <img alt="m92 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster hercules summer eye">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m92 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M92
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster puppis winter">
-          <a href="/">
-            <img alt="m93 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster puppis winter">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m93 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M93
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy canes-venatici spring telescope">
-          <a href="/">
-            <img alt="m94 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy canes-venatici spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m94 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M94
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy leo spring binoculars">
-          <a href="/">
-            <img alt="m95 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy leo spring binoculars">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m95 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M95
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy leo spring telescope">
-          <a href="/">
-            <img alt="m96 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy leo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m96 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M96
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile nebula ursa-major spring">
-          <a href="/">
-            <img alt="m97 owl nebula" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card nebula ursa-major spring">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m97 owl nebula" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M97
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Owl Nebula
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy coma-berenices spring telescope">
-          <a href="/">
-            <img alt="m98 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy coma-berenices spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m98 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M98
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy coma-berenices spring telescope">
-          <a href="/">
-            <img alt="m99 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy coma-berenices spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m99 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M99
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy coma-berenices spring telescopes">
-          <a href="/">
-            <img alt="m100 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy coma-berenices spring telescopes">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m100 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M100
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy ursa-major spring telescope">
-          <a href="/">
-            <img alt="m101 pinwheel galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy ursa-major spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m101 pinwheel galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M101
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Pinwheel Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy draco summer telescope">
-          <a href="/">
-            <img alt="m102 spindle galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy draco summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m102 spindle galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M102
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Spindle Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile open-cluster casseiopeia autumn">
-          <a href="/">
-            <img alt="m103 open cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card open-cluster casseiopeia autumn">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m103 open cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M103
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy virgo spring telescope">
-          <a href="/">
-            <img alt="m104 sombrero galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy virgo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m104 sombrero galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M104
               </h2>
-              <h3>
+              <h3 class="card__desc">
                 Sombrero Galaxy
               </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy leo spring telescope">
-          <a href="/">
-            <img alt="m105 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy leo spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m105 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M105
               </h2>
-              <h3>
-              </h3>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy canes-venatici spring telescope">
-          <a href="/">
-            <img alt="m106 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy canes-venatici spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m106 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M106
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile globular-cluster ophiuchus summer telescope">
-          <a href="/">
-            <img alt="m107 globular cluster" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card globular-cluster ophiuchus summer telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m107 globular cluster" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M107
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy ursa-major spring telescope">
-          <a href="/">
-            <img alt="m108 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy ursa-major spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m108 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M108
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile spiral-galaxy ursa-major spring telescope">
-          <a href="/">
-            <img alt="m109 spiral galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card spiral-galaxy ursa-major spring telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m109 spiral galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M109
               </h2>
             </div>
           </a>
         </div>
 
-        <div class="object-tile elliptical-galaxy andromeda autumn telescope">
-          <a href="/">
-            <img alt="m110 elliptical galaxy" src="images\image placeholder.png">
-            <div class="content">
-              <h2>
+        <div class="card elliptical-galaxy andromeda autumn telescope">
+          <a class="card__link" href="/">
+            <img class="card__img" alt="m110 elliptical galaxy" src="images\image placeholder.png">
+            <div class="card__content">
+              <h2 class="card__header">
                 M110
               </h2>
             </div>
@@ -1437,8 +1440,8 @@
 
       </div>
 
-      <div class="expand-more">
-        <a href="/" class="more-button">More</a>
+      <div class="btn--center">
+        <a href="/" class="btn btn--top-margin">More</a>
       </div>
 
 
@@ -1449,19 +1452,22 @@
 
   <footer>
     <div class="disclaimer">
-      <p>Disclaimer</p>
-      <p>Disclaimer text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      <p class="disclaimer__text">Disclaimer</p>
+      <p class="disclaimer__text">Disclaimer text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
         fugiat nulla pariatur.</p>
     </div>
 
     <div class="footer-nav">
-      <nav>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/">About</a></li>
-        <li><a href="/">Definitions</a></li>
-        <li><a href="/">Other Resources</a></li>
+      <nav class="nav">
+        <ul class="nav__list--footer">
+          <li class="nav__item nav--vertical"><a class="nav__link active" href="index.html">Home</a></li>
+          <li class="nav__item nav--vertical"><a class="nav__link" href="/">About</a></li>
+          <li class="nav__item nav--vertical"><a class="nav__link" href="/">Definitions</a></li>
+          <li class="nav__item nav--vertical"><a class="nav__link" href="/">Other Resources</a></li>
+        </ul>
       </nav>
     </div>
   </footer>

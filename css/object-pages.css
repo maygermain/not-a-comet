@@ -1,0 +1,47 @@
+/* .object-img_wrapper {} */
+
+.object__data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.data__wrapper {
+  padding: 5%;
+}
+
+/* .data__header {} */
+
+.data__lists {
+  padding: 0;
+}
+
+.object__num {
+  color: #9CA0B9;
+}
+
+.object__name {
+  color: #E9E8ED;
+}
+
+.data__header {
+  color: #E9E8ED;
+}
+
+.data-list__item {
+  list-style: none;
+  text-align: left;
+}
+
+.data__type {
+  color: #E9E8ED;
+}
+
+.indiv__data {
+  color: #9CA0B9;
+}
+
+.object__desc {
+  padding: 5% 10%;
+  color: #E9E8ED;
+}

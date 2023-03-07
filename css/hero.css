@@ -1,0 +1,14 @@
+.hero {
+  /* height: auto; */
+  text-align: center;
+  margin: 0;
+  padding: 5% 5% 5% 5%;
+}
+
+.hero__text {
+  display: inline-block;
+  text-align: center;
+  width: 30vh;
+  color: #E9E8ED;
+  padding-bottom: 15%;
+}
