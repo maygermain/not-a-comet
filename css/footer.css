@@ -16,6 +16,19 @@ footer {
   color: #E9E8ED;
 }
 
+
+.copyright-link {
+  color: #9CA0B9;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.copyright-link:hover {
+  text-decoration: underline;
+}
+
 .nav__list--footer {
   display: block;
   text-align: center;
