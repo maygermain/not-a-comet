@@ -5,18 +5,22 @@
 }
 
 .object-name__grid--single {
-  display: block;
+  /* display: block; */
   margin-bottom: 3%;
 }
 
 .object-name__wrapper {
   grid-column: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .object-name__text {
   margin: auto;
-  vertical-align: middle;
+}
+
+.object-name__text h1,
+h2 {
+  text-align: center;
 }
 
 .object-img__wrapper {
@@ -25,8 +29,8 @@
 }
 
 .object__img {
-  width: 30vw;
-  height: auto;
+  max-height: 50vh;
+  width: auto;
   /* object-fit: cover; */
 }
 
@@ -74,13 +78,13 @@
   color: #9CA0B9;
 }
 
-.star-map {
+/* .star-map {
   display: block;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-}
+} */
 
 .object__desc {
   padding: 5% 10%;
