@@ -193,5 +193,6 @@
   position: relative;
   border-radius: 20px;
   overflow: hidden;
+  padding: 5%;
   /* box-shadow: 1px 1px 30px #02021C; */
 }
