@@ -61,6 +61,8 @@
   display: inline-block;
   color: #E9E8ED;
   margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .filters .highlight {
@@ -69,8 +71,7 @@
 
 .filter-toggle {
   display: inline;
-  padding-right: 15%;
-  margin: 0;
+  padding-right: 17%;
 }
 
 .dropbutton {
@@ -80,6 +81,8 @@
   background-color: #9CA0B9;
   /*button styling*/
   padding: 10px 30px;
+  padding-top: none;
+  /*keep an eye out for problems*/
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
