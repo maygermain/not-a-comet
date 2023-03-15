@@ -167,8 +167,17 @@
   justify-content: center;
   object-fit: cover;
   width: 100%;
-  height: auto;
+  min-height: 66%;
+  max-height: 66%;
   margin: auto;
+  box-shadow: 0 3000px rgba(0, 0, 0, 0.7) inset;
+}
+
+.placeholder-img {
+  max-height: 50%;
+  object-fit: contain;
+  padding: 5%;
+  box-shadow: none;
 }
 
 .card__content {
