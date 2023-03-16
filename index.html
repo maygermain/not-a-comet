@@ -53,72 +53,26 @@
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Object Type</button>
           <div class="dropdown__content">
-            <h3 class="dropdown__selection" id="nebula" onclick="filterSelection('nebula')">Nebula</h3>
-            <h3 class="dropdown__selection" id="open-cluster" onclick="filterSelection('open-cluster')">Open Cluster
-            </h3>
-            <h3 class="dropdown__selection" id="globular-cluster" onclick="filterSelection('globular-cluster')">Globular
-              Cluster</h3>
-            <h3 class="dropdown__selection" id="star-cloud" onclick="filterSelection('star-cloud')">Star Cloud</h3>
-            <h3 class="dropdown__selection" id="double-star" onclick="filterSelection('double-star')">Double Star</h3>
-            <h3 class="dropdown__selection" id="spiral-galaxy" onclick="filterSelection('spiral-galaxy')">Spiral Galaxy
-            </h3>
-            <h3 class="dropdown__selection" id="elliptical-galaxy" onclick="filterSelection('elliptical-galaxy')">
-              Elliptical Galaxy</h3>
-            <h3 class="dropdown__selection" id="irregular-galaxy" onclick="filterSelection('irregular-galaxy')">
-              Irregular Galaxy</h3>
+            <a class="dropdown__selection" id="nebula" role="button">Nebula</a>
+            <a class="dropdown__selection" id="open-cluster" role="button">Open Cluster
+            </a>
+            <a class="dropdown__selection" id="globular-cluster" role="button">Globular
+              Cluster</a>
+            <a class="dropdown__selection" id="star-cloud" role="button">Star Cloud</a>
+            <a class="dropdown__selection" id="double-star" role="button">Double Star</a>
+            <a class="dropdown__selection" id="galaxy" role="button">Galaxy
+            </a>
           </div>
         </div>
-
-        <!--Constellation filter-->
-        <!-- <div class="dropdown">
-          <button class="dropbutton">Constellation</button>
-          <div class="dropdown-content">
-            <a href="/">Andromeda</a>
-            <a href="/">Aquarius</a>
-            <a href="/">Auriga</a>
-            <a href="/">Cancer</a>
-            <a href="/">Canes Venatici</a>
-            <a href="/">Canis Minor</a>
-            <a href="/">Capricornus</a>
-            <a href="/">Casseiopeia</a>
-            <a href="/">Cetus</a>
-            <a href="/">Coma Berenices</a>
-            <a href="/">Cygnus</a>
-            <a href="/">Draco</a>
-            <a href="/">Gemini</a>
-            <a href="/">Hercules</a>
-            <a href="/">Hydra</a>
-            <a href="/">Leo</a>
-            <a href="/">Lepus</a>
-            <a href="/">Lyra</a>
-            <a href="/">Monoceros</a>
-            <a href="/">Ophiuchus</a>
-            <a href="/">Orion</a>
-            <a href="/">Pegasus</a>
-            <a href="/">Perseus</a>
-            <a href="/">Pisces</a>
-            <a href="/">Puppis</a>
-            <a href="/">Sagitta</a>
-            <a href="/">Sagittarius</a>
-            <a href="/">Scorpius</a>
-            <a href="/">Scutum</a>
-            <a href="/">Serpens</a>
-            <a href="/">Taurus</a>
-            <a href="/">Triangulum</a>
-            <a href="/">Ursa Major</a>
-            <a href="/">Virgo</a>
-            <a href="/">Vulpecula</a>
-          </div>
-        </div> -->
 
         <!--Season filter-->
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Season</button>
           <div class="dropdown__content">
-            <h3 class="dropdown__selection" id="winter" onclick="filterSelection('winter')">Winter</h3>
-            <h3 class="dropdown__selection" id="spring" onclick="filterSelection('spring')">Spring</h3>
-            <h3 class="dropdown__selection" id="summer" onclick="filterSelection('summer')">Summer</h3>
-            <h3 class="dropdown__selection" id="fall" onclick="filterSelection('fall')">Fall</h3>
+            <a class="dropdown__selection" id="winter" role="button">Winter</a>
+            <a class="dropdown__selection" id="spring" role="button">Spring</a>
+            <a class="dropdown__selection" id="summer" role="button">Summer</a>
+            <a class="dropdown__selection" id="autumn" role="button">Autumn</a>
           </div>
         </div>
 
@@ -126,9 +80,9 @@
         <div class="dropdown">
           <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Visibility</button>
           <div class="dropdown__content">
-            <h3 class="dropdown__selection" id="eye" onclick="filterSelection('eye')">Eye</h3>
-            <h3 class="dropdown__selection" id="binoculars" onclick="filterSelection('binoculars')">Binoculars</h3>
-            <h3 class="dropdown__selection" id="telescope" onclick="filterSelection('telescope')">Telescope</h3>
+            <a class="dropdown__selection" id="eye" role="button">Eye</a>
+            <a class="dropdown__selection" id="binoculars" role="button">Binoculars</a>
+            <a class="dropdown__selection" id="telescope" role="button">Telescope</a>
           </div>
         </div>
       </div>
@@ -501,7 +455,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy andromeda autumn eye">
+        <div class="card galaxy andromeda autumn eye">
           <a class="card__link" href="m31-andromeda-galaxy.html">
             <img class="card__img" alt="m31 andromeda galaxy" src="images\nasa images\m31.jpg">
             <div class="card__content">
@@ -515,7 +469,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy andromeda autumn telescope">
+        <div class="card galaxy andromeda autumn telescope">
           <a class="card__link" href="m32.html">
             <img class="card__img" alt="m32 elliptical galaxy" src="images\nasa images\m32.jpg">
             <div class="card__content">
@@ -526,7 +480,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy triangulum autumn eye">
+        <div class="card galaxy triangulum autumn eye">
           <a class="card__link" href="m22-triangulum-galaxy">
             <img class="card__img" alt="m33 triangulum galaxy" src="images\nasa images\m33 triangulum.jpg">
             <div class="card__content">
@@ -720,7 +674,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy virgo spring binoculars">
+        <div class="card galaxy virgo spring binoculars">
           <a class="card__link" href="m49.html">
             <img class="card__img" alt="m49 elliptical galaxy" src="images\nasa images\m49.png">
             <div class="card__content">
@@ -742,7 +696,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy vanes-venatici spring telescope">
+        <div class="card galaxy vanes-venatici spring telescope">
           <a class="card__link" href="m51-whirlpool-galaxy.html">
             <img class="card__img" alt="m51 whirlpool galaxy" src="images\nasa images\m51 whirlpool galaxy.jpg">
             <div class="card__content">
@@ -826,7 +780,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy virgo spring binoculars">
+        <div class="card galaxy virgo spring binoculars">
           <a class="card__link" href="m58.html">
             <img class="card__img" alt="m58 spiral galaxy" src="images\nasa images\m58.png">
             <div class="card__content">
@@ -837,7 +791,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy virgo spring telescope">
+        <div class="card galaxy virgo spring telescope">
           <a class="card__link" href="m59.html">
             <img class="card__img" alt="m59 elliptical galaxy" src="images\nasa images\m59.jpg">
             <div class="card__content">
@@ -848,7 +802,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy virgo spring telescope">
+        <div class="card galaxy virgo spring telescope">
           <a class="card__link" href="m60.html">
             <img class="card__img" alt="m60 elliptical galaxy" src="images\nasa images\m60.jpg">
             <div class="card__content">
@@ -859,7 +813,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy virgo spring telescope">
+        <div class="card galaxy virgo spring telescope">
           <a class="card__link" href="m61.html">
             <img class="card__img" alt="m61 spiral galaxy" src="images\nasa images\m61.jpg">
             <div class="card__content">
@@ -881,7 +835,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy canes-venatici spring telescope">
+        <div class="card galaxy canes-venatici spring telescope">
           <a class="card__link" href="m63-sunflower-galaxy.html">
             <img class="card__img" alt="m63 sunflower galaxy" src="images\nasa images\m63.jpg">
             <div class="card__content">
@@ -895,7 +849,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy coma-berenices spring telescope">
+        <div class="card galaxy coma-berenices spring telescope">
           <a class="card__link" href="m64-black-eye-galaxy.html">
             <img class="card__img" alt="m64 black eye galaxy" src="images\nasa images\m64 black eye galaxy.jpg">
             <div class="card__content">
@@ -909,7 +863,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy leo spring telescope">
+        <div class="card galaxy leo spring telescope">
           <a class="card__link" href="m65.html">
             <img class="card__img" alt="m65 spiral galaxy" src="images\nasa images\m65.jpg">
             <div class="card__content">
@@ -920,7 +874,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy leo spring telescope">
+        <div class="card galaxy leo spring telescope">
           <a class="card__link" href="m66.html">
             <img class="card__img" alt="m66 spiral galaxy" src="images\nasa images\m66.jpg">
             <div class="card__content">
@@ -1008,7 +962,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy pisces autumn telescope">
+        <div class="card galaxy pisces autumn telescope">
           <a class="card__link" href="m74.html">
             <img class="card__img" alt="m74 spiral galaxy" src="images\nasa images\m74.jpg">
             <div class="card__content">
@@ -1044,7 +998,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy cetus summer telescope">
+        <div class="card galaxy cetus summer telescope">
           <a class="card__link" href="m77-cetus-a.html">
             <img class="card__img" alt="m77 cetus a" src="images\nasa images\m77.jpg">
             <div class="card__content">
@@ -1091,7 +1045,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy ursa-major spring binoculars">
+        <div class="card galaxy ursa-major spring binoculars">
           <a class="card__link" href="m81-bodes-galaxy.html">
             <img class="card__img" alt="m81 bode's galaxy" src="images\nasa images\m81.jpg">
             <div class="card__content">
@@ -1105,7 +1059,7 @@
           </a>
         </div>
 
-        <div class="card irregular-galaxy ursa-major spring binoculars">
+        <div class="card galaxy ursa-major spring binoculars">
           <a class="card__link" href="m82-cigar-galaxy.html">
             <img class="card__img" alt="m82 cigar galaxy" src="images\nasa images\m82.jpg">
             <div class="card__content">
@@ -1119,7 +1073,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy hydra spring binoculars">
+        <div class="card galaxy hydra spring binoculars">
           <a class="card__link" href="m83-southern-pinwheel.html">
             <img class="card__img" alt="m83 southern pinwheel" src="images\nasa images\m83.jpg">
             <div class="card__content">
@@ -1133,7 +1087,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy virgo spring telescope">
+        <div class="card galaxy virgo spring telescope">
           <a class="card__link" href="m84.html">
             <img class="card__img" alt="m84 elliptical galaxy" src="images\nasa images\m84.jpg">
             <div class="card__content">
@@ -1144,7 +1098,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy coma-berenices spring telescope">
+        <div class="card galaxy coma-berenices spring telescope">
           <a class="card__link" href="m85.html">
             <img class="card__img" alt="m85 spiral galaxy" src="images\nasa images\m85.jpg">
             <div class="card__content">
@@ -1155,7 +1109,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy virgo spring binoculars">
+        <div class="card galaxy virgo spring binoculars">
           <a class="card__link" href="m86.html">
             <img class="card__img" alt="m86 elliptical galaxy" src="images\nasa images\m86.png">
             <div class="card__content">
@@ -1166,7 +1120,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy virgo spring telescope">
+        <div class="card galaxy virgo spring telescope">
           <a class="card__link" href="m87-virgo-a.html">
             <img class="card__img" alt="m87 virgo a" src="images\nasa images\m87.jpg">
             <div class="card__content">
@@ -1180,7 +1134,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy coma-berenices spring binoculars">
+        <div class="card galaxy coma-berenices spring binoculars">
           <a class="card__link" href="m88.html">
             <img class="card__img" alt="m88 spiral galaxy" src="images\nasa images\m88.jpg">
             <div class="card__content">
@@ -1191,7 +1145,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy virgo spring telescope">
+        <div class="card galaxy virgo spring telescope">
           <a class="card__link" href="m89.html">
             <img class="card__img" alt="m89 elliptical galaxy" src="images\nasa images\m89.png">
             <div class="card__content">
@@ -1202,7 +1156,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy virgo spring binoculars">
+        <div class="card galaxy virgo spring binoculars">
           <a class="card__link" href="m90.html">
             <img class="card__img" alt="m90 spiral galaxy" src="images\nasa images\m90.jpg">
             <div class="card__content">
@@ -1213,7 +1167,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy coma-berenices spring telescope">
+        <div class="card galaxy coma-berenices spring telescope">
           <a class="card__link" href="m91.html">
             <img class="card__img" alt="m91 spiral galaxy" src="images\nasa images\m91.jpg">
             <div class="card__content">
@@ -1246,7 +1200,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy canes-venatici spring telescope">
+        <div class="card galaxy canes-venatici spring telescope">
           <a class="card__link" href="m94.html">
             <img class="card__img" alt="m94 spiral galaxy" src="images\nasa images\m94.jpg">
             <div class="card__content">
@@ -1257,7 +1211,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy leo spring binoculars">
+        <div class="card galaxy leo spring binoculars">
           <a class="card__link" href="m95.html">
             <img class="card__img" alt="m95 spiral galaxy" src="images\nasa images\m95.jpg">
             <div class="card__content">
@@ -1268,7 +1222,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy leo spring telescope">
+        <div class="card galaxy leo spring telescope">
           <a class="card__link" href="m96.html">
             <img class="card__img" alt="m96 spiral galaxy" src="images\nasa images\m96.jpg">
             <div class="card__content">
@@ -1293,7 +1247,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy coma-berenices spring telescope">
+        <div class="card galaxy coma-berenices spring telescope">
           <a class="card__link" href="m98.html">
             <img class="card__img" alt="m98 spiral galaxy" src="images\nasa images\m98.png">
             <div class="card__content">
@@ -1304,7 +1258,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy coma-berenices spring telescope">
+        <div class="card galaxy coma-berenices spring telescope">
           <a class="card__link" href="m99.html">
             <img class="card__img" alt="m99 spiral galaxy" src="images\nasa images\m99.jpg">
             <div class="card__content">
@@ -1315,7 +1269,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy coma-berenices spring telescopes">
+        <div class="card galaxy coma-berenices spring telescopes">
           <a class="card__link" href="m100.html">
             <img class="card__img" alt="m100 spiral galaxy" src="images\nasa images\m100.png">
             <div class="card__content">
@@ -1326,7 +1280,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy ursa-major spring telescope">
+        <div class="card galaxy ursa-major spring telescope">
           <a class="card__link" href="m101-pinwheel-galaxy.html">
             <img class="card__img" alt="m101 pinwheel galaxy" src="images\nasa images\m101.jpg">
             <div class="card__content">
@@ -1340,7 +1294,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy draco summer telescope">
+        <div class="card galaxy draco summer telescope">
           <a class="card__link" href="m102-spindle-galaxy.html">
             <img class="card__img" alt="m102 spindle galaxy" src="images\nasa images\m102.jpg">
             <div class="card__content">
@@ -1365,7 +1319,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy virgo spring telescope">
+        <div class="card galaxy virgo spring telescope">
           <a class="card__link" href="m104-sombrero-galaxy.html">
             <img class="card__img" alt="m104 sombrero galaxy" src="images\nasa images\m104.jpg">
             <div class="card__content">
@@ -1379,7 +1333,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy leo spring telescope">
+        <div class="card galaxy leo spring telescope">
           <a class="card__link" href="m105.html">
             <img class="card__img" alt="m105 elliptical galaxy" src="images\nasa images\m105.jpg">
             <div class="card__content">
@@ -1390,7 +1344,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy canes-venatici spring telescope">
+        <div class="card galaxy canes-venatici spring telescope">
           <a class="card__link" href="m106.html">
             <img class="card__img" alt="m106 spiral galaxy" src="images\nasa images\m106.jpg">
             <div class="card__content">
@@ -1412,7 +1366,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy ursa-major spring telescope">
+        <div class="card galaxy ursa-major spring telescope">
           <a class="card__link" href="m108.html">
             <img class="card__img" alt="m108 spiral galaxy" src="images\nasa images\m108.png">
             <div class="card__content">
@@ -1423,7 +1377,7 @@
           </a>
         </div>
 
-        <div class="card spiral-galaxy ursa-major spring telescope">
+        <div class="card galaxy ursa-major spring telescope">
           <a class="card__link" href="m109.html">
             <img class="card__img" alt="m109 spiral galaxy" src="images\nasa images\m109.jpg">
             <div class="card__content">
@@ -1434,7 +1388,7 @@
           </a>
         </div>
 
-        <div class="card elliptical-galaxy andromeda autumn telescope">
+        <div class="card galaxy andromeda autumn telescope">
           <a class="card__link" href="m110.html">
             <img class="card__img" alt="m110 elliptical galaxy" src="images\nasa images\m110.png">
             <div class="card__content">

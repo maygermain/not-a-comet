@@ -93,6 +93,7 @@
   font-size: 14px;
   font-weight: 300;
   cursor: pointer;
+  max-height: 50px;
 }
 
 .dropdown {
@@ -111,7 +112,7 @@
 }
 
 /*according to BEM I should be using .dropdown__selection, but it won't work - come back to this later!*/
-.dropdown h3 {
+.dropdown a {
   display: block;
   /* styling  */
   color: #02021C;

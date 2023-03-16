@@ -14,9 +14,9 @@
   text-align: left;
 }
 
-.object-name__text {
+/* .object-name__text {
   margin: auto;
-}
+} */
 
 .object-name__text h1,
 h2 {
@@ -77,14 +77,6 @@ h2 {
 .indiv__data {
   color: #9CA0B9;
 }
-
-/* .star-map {
-  display: block;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-} */
 
 .object__desc {
   padding: 0% 20%;
