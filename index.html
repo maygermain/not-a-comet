@@ -51,7 +51,7 @@
         <h3>Filters:</h3>
         <!--Object type filter-->
         <div class="dropdown">
-          <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Object Type</button>
+          <button class="dropbutton">&#9662 Object Type</button>
           <div class="dropdown__content">
             <a class="dropdown__selection" id="nebula" role="button">Nebula</a>
             <a class="dropdown__selection" id="open-cluster" role="button">Open Cluster
@@ -67,7 +67,7 @@
 
         <!--Season filter-->
         <div class="dropdown">
-          <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Season</button>
+          <button class="dropbutton">&#9662 Season</button>
           <div class="dropdown__content">
             <a class="dropdown__selection" id="winter" role="button">Winter</a>
             <a class="dropdown__selection" id="spring" role="button">Spring</a>
@@ -78,12 +78,18 @@
 
         <!--Visibility filter-->
         <div class="dropdown">
-          <button class="dropbutton"><i class="fa-solid fa-chevron-down fa-2xs filter-toggle"></i>Visibility</button>
+          <button class="dropbutton">&#9662 Visibility</button>
           <div class="dropdown__content">
             <a class="dropdown__selection" id="eye" role="button">Eye</a>
             <a class="dropdown__selection" id="binoculars" role="button">Binoculars</a>
             <a class="dropdown__selection" id="telescope" role="button">Telescope</a>
           </div>
+        </div>
+
+
+        <!--Reset filters-->
+        <div class="dropdown">
+          <button class="dropbutton" id="reset">Reset</button>
         </div>
       </div>
 
@@ -339,7 +345,7 @@
         </div>
 
         <div class="card open-cluster sagittarius summer">
-          <a class="card__link" href="/">
+          <a class="card__link" href="m21.html">
             <img class="card__img placeholder-img" alt="m21 open cluster" src="images\open cluster illustration.svg">
             <div class="card__content">
               <h2 class="card__header">
@@ -481,7 +487,7 @@
         </div>
 
         <div class="card galaxy triangulum autumn eye">
-          <a class="card__link" href="m22-triangulum-galaxy">
+          <a class="card__link" href="m33-triangulum-galaxy.html">
             <img class="card__img" alt="m33 triangulum galaxy" src="images\nasa images\m33 triangulum.jpg">
             <div class="card__content">
               <h2 class="card__header">
@@ -1401,9 +1407,9 @@
 
       </div>
 
-      <div class="btn--center">
+      <!-- <div class="btn--center">
         <a href="/" class="btn btn--more">More</a>
-      </div>
+      </div> -->
 
 
     </div>
@@ -1418,7 +1424,7 @@
         AstroPixels, and will be sourced accordingly. Images of Messier objects are taken from the NASA Hubble’s Messier
         Catalogue, and may be used within educational contexts unless otherwise noted according to NASA’s Copyright &
         Reproduction Guidelines, found <a class="copyright-link"
-          href="https://asdc.larc.nasa.gov/copyright-information">here</a>.</p>
+        target=”_blank” rel=noopener href="https://asdc.larc.nasa.gov/copyright-information">here</a>.</p>
     </div>
 
     <div class="footer-nav">

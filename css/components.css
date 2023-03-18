@@ -93,13 +93,12 @@
   font-size: 14px;
   font-weight: 300;
   cursor: pointer;
-  max-height: 50px;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 .dropdown__content {
@@ -111,7 +110,6 @@
   z-index: 1;
 }
 
-/*according to BEM I should be using .dropdown__selection, but it won't work - come back to this later!*/
 .dropdown a {
   display: block;
   /* styling  */

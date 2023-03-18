@@ -1,112 +1,128 @@
-/*variables*/
-/*all filter variables*/
-var all = document.querySelectorAll('dropdown__selection');
+//On click...
+//1. Fade all tiles out 
+//2. Check for tiles with x class 
+//3. Select those tiles to fade in
+//4. Highlight current filter
 
-/*object type filter variables*/
-var nebula = document.getElementsByClassName('nebula');
-var openCluster = document.getElementsByClassName('open-cluster');
-var globularCluster = document.getElementsByClassName('globular-cluster');
-var starCloud = document.getElementsByClassName('star-cloud');
-var doubleStar = document.getElementsByClassName('double-star');
-var galaxy = document.getElementsByClassName('galaxy');
+//Nebula filter
+$('#nebula').click(function () {
+  //hide all items
+  $(".card").hide();
 
+  //show items with class ".nebula"
+  $(".nebula").show();
+})
 
-/*season filter variables*/
-var winter = document.getElementsByClassName('winter');
-var spring = document.getElementsByClassName('spring');
-var summer = document.getElementsByClassName('summer');
-var autumn = document.getElementsByClassName('autumn');
+//Open cluster filter
+$('#open-cluster').click(function () {
+  //hide all items
+  $(".card").hide();
 
-/*visibility filter variables*/
-var eye = document.getElementsByClassName('eye');
-var binoculars = document.getElementsByClassName('binoculars');
-var telescope = document.getElementsByClassName('telescope');
+  //show items with class ".nebula"
+  $(".open-cluster").show();
+})
 
-function filterItems(type) {
-  //fade out all first 
-  for (var x = 0; x < all.length; x++) {
-    all[x].getElementsByClassName.opacity = "0";
-  }
+//Globular cluster filter
+$('#globular-cluster').click(function () {
+  //hide all items
+  $(".card").hide();
 
-  //set a timer matched transition in css
-  setTimeout(function () {
-    //step one: set all to display none
-    for (var x = 0; x < all.length; x++) {
-      all[x].style.display = "none";
-    }
+  //show items with class ".nebula"
+  $(".globular-cluster").show();
+})
 
-    //step two: set all with filter type to display viisble 
-    for (var x = 0; x < type.length; x++) {
-      type[x].style.opacity = "1";
-      type[x].style.display = "block";
-    }
-  }, 500);
+//Star cloud filter
+$('#star-cloud').click(function () {
+  //hide all items
+  $(".card").hide();
 
-  //style dropdown filter options
-  for (var x = 0; x < all.length; x++) {
-    all[x].style.background = "";
-  }
+  //show items with class ".nebula"
+  $(".star-cloud").show();
+})
 
-  //event is deprecated, what to use instead??
-  document.getElementById(event.currentTarget.id).style.background = "#3F4A66";
-}
+//Double star filter
+$('#double-star').click(function () {
+  //hide all items
+  $(".card").hide();
 
-//dropdown filters
-/*document.getElementById('filter-all').onclick = function(){
-  filterItems(all); 
-} Need to setup a "reset" button*/
+  //show items with class ".nebula"
+  $(".double-star").show();
+})
 
-//object type filters
-document.getElementById('nebula').onclick = function () {
-  filterItems(nebula);
-}
+//Galaxy filter
+$('#galaxy').click(function () {
+  //hide all items
+  $(".card").hide();
 
-document.getElementById('open-cluster').onclick = function () {
-  filterItems(openCluster);
-}
+  //show items with class ".nebula"
+  $(".galaxy").show();
+})
 
-document.getElementById('globular-cluster').onclick = function () {
-  filterItems(globularCluster);
-}
+//Winter filter
+$('#winter').click(function () {
+  //hide all items
+  $(".card").hide();
 
-document.getElementById('star-cloud').onclick = function () {
-  filterItems(starCloud);
-}
+  //show items with class ".nebula"
+  $(".winter").show();
+})
 
-document.getElementById('double-star').onclick = function () {
-  filterItems(doubleStar);
-}
+//Spring filter
+$('#spring').click(function () {
+  //hide all items
+  $(".card").hide();
 
-document.getElementById('galaxy').onclick = function () {
-  filterItems(galaxy);
-}
+  //show items with class ".nebula"
+  $(".spring").show();
+})
 
-//season filters
-document.getElementById('winter').onclick = function () {
-  filterItems(winter);
-}
+//Summer filter
+$('#summer').click(function () {
+  //hide all items
+  $(".card").hide();
 
-document.getElementById('spring').onclick = function () {
-  filterItems(spring);
-}
+  //show items with class ".nebula"
+  $(".summer").show();
+})
 
-document.getElementById('summer').onclick = function () {
-  filterItems(summer);
-}
+//Fall filter
+$('#fall').click(function () {
+  //hide all items
+  $(".card").hide();
 
-document.getElementById('autumn').onclick = function () {
-  filterItems(autumn);
-}
+  //show items with class ".nebula"
+  $(".fall").show();
+})
 
-//visibility filters
-document.getElementById('eye').onclick = function () {
-  filterItems(eye);
-}
+//Eye filter
+$('#eye').click(function () {
+  //hide all items
+  $(".card").hide();
 
-document.getElementById('binoculars').onclick = function () {
-  filterItems(binoculars);
-}
+  //show items with class ".nebula"
+  $(".eye").show();
+})
 
-document.getElementById('telescope').onclick = function () {
-  filterItems(telescope);
-}
+//Binocular filter
+$('#binocular').click(function () {
+  //hide all items
+  $(".card").hide();
+
+  //show items with class ".nebula"
+  $(".binocular").show();
+})
+
+//Telescope Filter
+$('#telescope').click(function () {
+  //hide all items
+  $(".card").hide();
+
+  //show items with class ".nebula"
+  $(".telescope").show();
+})
+
+//Reset button
+$('#reset').click(function () {
+  //show all items
+  $(".card").show();
+})
