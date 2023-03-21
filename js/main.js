@@ -86,12 +86,12 @@ $('#summer').click(function () {
 })
 
 //Fall filter
-$('#fall').click(function () {
+$('#autumn').click(function () {
   //hide all items
   $(".card").hide();
 
   //show items with class ".nebula"
-  $(".fall").show();
+  $(".autumn").show();
 })
 
 //Eye filter
@@ -104,12 +104,12 @@ $('#eye').click(function () {
 })
 
 //Binocular filter
-$('#binocular').click(function () {
+$('#binoculars').click(function () {
   //hide all items
   $(".card").hide();
 
   //show items with class ".nebula"
-  $(".binocular").show();
+  $(".binoculars").show();
 })
 
 //Telescope Filter
